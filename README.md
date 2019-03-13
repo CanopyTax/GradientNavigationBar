@@ -41,6 +41,49 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 ---
 
+## Usage
+
+### Quick Start
+Initialize GradientNavigationBar with a rootViewController:
+```swift
+let gradientNavigationController = GradientNavigationBar(rootViewController: ViewController())
+// Set gradient colors
+gradientNavigationController.gradientColors = [GradientNavigationBarColor(color: UIColor.blue, location: 0.0),
+                                               GradientNavigationBarColor(color: UIColor.purple, location: 1.0)]
+```
+
+In most cases, you can interact with GradientNavigationBar in the same way you use UINavigationController
+```swift
+class MyViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Set a single title
+        self.title = "My View Title"
+        
+        // Set a title with a header
+        self.navigationItem.setTitle(title: "Title", header: "Header")
+
+        // Create button items
+        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
+        let randomBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(randomButtonPressed))
+
+        // Set button items
+        self.navigationItem.setRightBarButtonItems([addBarButtonItem, randomBarButtonItem], animated: true)
+    }
+    
+    @objc func addButtonPressed() {
+        navigationController?.pushViewController(ViewController(), animated: true)
+    }
+    
+    @objc func randomButtonPressed() {
+        // ...
+    }
+}
+```
+
+---
+
 ## License
 
 GradientNavigationBar is released under the MIT license. See LICENSE for details.
