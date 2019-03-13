@@ -2,6 +2,8 @@
 
 # GradientNavigationBar
 
+![alt text](https://raw.githubusercontent.com/CanopyTax/GradientNavigationBar/master/resources/GradientNavigationBar1.png)
+
 GradientNavigationBar is a drop in subclass of UINavigationBar that easily allows you to set the background to be a gradient. It supports SafeAreaLayoutGuide so it looks great on iPhone X and 3rd generation iPad Pro devices.
 
 ## Requirements
