@@ -52,6 +52,8 @@ gradientNavigationController.gradientColors = [GradientNavigationBarColor(color:
                                                GradientNavigationBarColor(color: UIColor.purple, location: 1.0)]
 ```
 
+Other properties can be set including *headerFont*, *titleFont*, and *foregroundColor*
+
 In most cases, you can interact with GradientNavigationBar in the same way you use UINavigationController
 ```swift
 class MyViewController: UIViewController {
