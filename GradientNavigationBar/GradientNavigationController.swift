@@ -9,7 +9,7 @@
 import UIKit
 
 /// UINavigationController subclass which supports gradient backgrounds, bleeds into the status bar, and supports safeAreaLayoutGuide
-public class GradientNavigationBar: UINavigationController {
+open class GradientNavigationBar: UINavigationController {
     // The font of the header label
     public var headerFont: UIFont {
         get {
@@ -49,11 +49,11 @@ public class GradientNavigationBar: UINavigationController {
     }
 
     // The style for the status bar
-    override public var preferredStatusBarStyle: UIStatusBarStyle {
+    override open var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
-    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
         reloadAttributes()
@@ -65,7 +65,7 @@ public class GradientNavigationBar: UINavigationController {
         reloadAttributes()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
         reloadAttributes()
