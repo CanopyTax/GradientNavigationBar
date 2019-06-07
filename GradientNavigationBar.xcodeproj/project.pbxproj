@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4B3DA88E22307BF900EE893B /* GradientNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B3DA88C22307BF900EE893B /* GradientNavigationBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B3DA89622308C3B00EE893B /* GradientNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3DA89522308C3B00EE893B /* GradientNavigationController.swift */; };
-		4B3DA8CB2231901700EE893B /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3DA8CA2231901700EE893B /* FontManager.swift */; };
 		4B3DA8CD223199AB00EE893B /* GradientNavigationBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3DA8CC223199AB00EE893B /* GradientNavigationBarColor.swift */; };
 		4B3DA8CF22319A6200EE893B /* NavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3DA8CE22319A6200EE893B /* NavigationItem+Extension.swift */; };
 		4B3DA8D122319AA600EE893B /* NavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3DA8D022319AA600EE893B /* NavigationBar+Extension.swift */; };
@@ -20,7 +19,6 @@
 		4B3DA88C22307BF900EE893B /* GradientNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientNavigationBar.h; sourceTree = "<group>"; };
 		4B3DA88D22307BF900EE893B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3DA89522308C3B00EE893B /* GradientNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientNavigationController.swift; sourceTree = "<group>"; };
-		4B3DA8CA2231901700EE893B /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		4B3DA8CC223199AB00EE893B /* GradientNavigationBarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientNavigationBarColor.swift; sourceTree = "<group>"; };
 		4B3DA8CE22319A6200EE893B /* NavigationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationItem+Extension.swift"; sourceTree = "<group>"; };
 		4B3DA8D022319AA600EE893B /* NavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationBar+Extension.swift"; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 				4B3DA8CC223199AB00EE893B /* GradientNavigationBarColor.swift */,
 				4B3DA8CE22319A6200EE893B /* NavigationItem+Extension.swift */,
 				4B3DA8D022319AA600EE893B /* NavigationBar+Extension.swift */,
-				4B3DA8CA2231901700EE893B /* FontManager.swift */,
 				4B3DA88D22307BF900EE893B /* Info.plist */,
 			);
 			path = GradientNavigationBar;
@@ -147,7 +144,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B3DA8CF22319A6200EE893B /* NavigationItem+Extension.swift in Sources */,
-				4B3DA8CB2231901700EE893B /* FontManager.swift in Sources */,
 				4B3DA8D122319AA600EE893B /* NavigationBar+Extension.swift in Sources */,
 				4B3DA8CD223199AB00EE893B /* GradientNavigationBarColor.swift in Sources */,
 				4B3DA89622308C3B00EE893B /* GradientNavigationController.swift in Sources */,

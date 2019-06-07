@@ -14,17 +14,24 @@ extension UINavigationItem {
     /// - Parameters:
     ///   - title: The title text to use
     ///   - header: The header text to use
-    public func setTitle(title: String? = nil,
-                         header: String? = nil) {
+    ///   - navigationController: If you pass in the navigation controller, it will be unwrapped and cast to a CanopyNavigationBar.
+    ///                           If the unwrapping or cast fails, default values will be used.
+    public func setTitle(title: String? = nil, header: String? = nil, navigationController: UINavigationController? = nil) {
+        var headerFont = GradientNavigationDefaults.headerFont
+        var titleFont = GradientNavigationDefaults.titleFont
+        var textColor = GradientNavigationDefaults.foregroundColor
 
-        let headerFont = FontManager.shared.headerFont
-        let titleFont = FontManager.shared.titleFont
+        if let gradientNavigationBar = navigationController as? GradientNavigationBar {
+            headerFont = gradientNavigationBar.headerFont
+            titleFont = gradientNavigationBar.titleFont
+            textColor = gradientNavigationBar.foregroundColor
+        }
 
         // Header Label
         let headerLabel = UILabel()
         headerLabel.text = header
         headerLabel.font = headerFont
-        headerLabel.textColor = FontManager.shared.color
+        headerLabel.textColor = textColor
         headerLabel.textAlignment = .center
         headerLabel.lineBreakMode = .byTruncatingMiddle
         headerLabel.sizeToFit()
@@ -33,7 +40,7 @@ extension UINavigationItem {
         let titleLabel = UILabel()
         titleLabel.text = title
         titleLabel.font = titleFont
-        titleLabel.textColor = FontManager.shared.color
+        titleLabel.textColor = textColor
         titleLabel.textAlignment = .center
         titleLabel.lineBreakMode = .byTruncatingMiddle
         titleLabel.sizeToFit()

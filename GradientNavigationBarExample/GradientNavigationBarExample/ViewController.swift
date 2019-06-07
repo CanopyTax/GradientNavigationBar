@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
         view.backgroundColor = UIColor.white
 
-        self.navigationItem.setTitle(title: "Title", header: "Header")
+        self.navigationItem.setTitle(title: "Title", header: "Header", navigationController: navigationController)
 
         let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
         let randomBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(randomButtonPressed))

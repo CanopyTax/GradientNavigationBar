@@ -8,41 +8,39 @@
 
 import UIKit
 
+struct GradientNavigationDefaults {
+    static let headerFont = UIFont.systemFont(ofSize: 13, weight: .regular)
+    static let titleFont = UIFont.systemFont(ofSize: 18, weight: .bold)
+    static let foregroundColor = UIColor.white
+    static let gradientColors: [GradientNavigationBarColor] = [GradientNavigationBarColor(color: UIColor.red, location: 0.0),
+                                                               GradientNavigationBarColor(color: UIColor.orange, location: 1.0)]
+}
+
 /// UINavigationController subclass which supports gradient backgrounds, bleeds into the status bar, and supports safeAreaLayoutGuide
 open class GradientNavigationBar: UINavigationController {
     // The font of the header label
-    public var headerFont: UIFont {
-        get {
-            return FontManager.shared.headerFont
-        }
-        set {
-            FontManager.shared.headerFont = newValue
+    public var headerFont: UIFont = GradientNavigationDefaults.headerFont {
+        didSet {
             reloadAttributes()
         }
     }
 
     // The font of the title label
-    public var titleFont: UIFont {
-        get {
-            return FontManager.shared.titleFont
-        }
-        set {
-            FontManager.shared.titleFont = newValue
+    public var titleFont: UIFont = GradientNavigationDefaults.titleFont {
+        didSet {
             reloadAttributes()
         }
     }
 
-    // The foreground color of text and button tint
-    public var foregroundColor: UIColor = UIColor.white {
+    // The foreground color of text and tint
+    public var foregroundColor: UIColor = GradientNavigationDefaults.foregroundColor {
         didSet {
-            FontManager.shared.color = foregroundColor
             reloadAttributes()
         }
     }
 
     // The components of the gradient to be drawn in the background
-    public var gradientColors: [GradientNavigationBarColor] = [GradientNavigationBarColor(color: UIColor.red, location: 0.0),
-                                                               GradientNavigationBarColor(color: UIColor.orange, location: 1.0)] {
+    public var gradientColors: [GradientNavigationBarColor] = GradientNavigationDefaults.gradientColors {
         didSet {
             reloadAttributes()
         }
