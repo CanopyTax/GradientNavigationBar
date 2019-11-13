@@ -28,7 +28,7 @@ $ brew install carthage
 To integrate GradientNavigationBar into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "CanopyTax/GradientNavigationBar" ~> 0.1.5
+github "CanopyTax/GradientNavigationBar" ~> 0.2.0
 ```
 
 Run `carthage update` to build the framework and drag the built `GradientNavigationBar.framework` into your Xcode project.
@@ -66,7 +66,7 @@ class MyViewController: UIViewController {
         self.title = "My View Title"
         
         // Set a title with a header
-        self.navigationItem.setTitle(title: "Title", header: "Header")
+        self.navigationItem.setTitle(title: "Title", header: "Header", navigationController: navigationController)
 
         // Create button items
         let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
