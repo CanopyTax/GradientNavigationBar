@@ -46,7 +46,7 @@ extension UINavigationItem {
         titleLabel.sizeToFit()
 
         // Add elements to the stack view, if one is nil, the other will be centered within the navbar
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, headerLabel])
+        let stackView = UIStackView(arrangedSubviews: [headerLabel, titleLabel])
         stackView.distribution = .equalCentering
         stackView.spacing = -5
         stackView.axis = .vertical
