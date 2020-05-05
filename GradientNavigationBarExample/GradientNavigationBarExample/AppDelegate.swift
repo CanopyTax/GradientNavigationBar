@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window.rootViewController = GradientNavigationBar(rootViewController: ViewController())
+        (window.rootViewController as? GradientNavigationBar)?.spacing = -2
         window.makeKeyAndVisible()
 
         return true

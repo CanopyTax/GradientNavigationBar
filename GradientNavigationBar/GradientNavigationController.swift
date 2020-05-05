@@ -14,6 +14,7 @@ struct GradientNavigationDefaults {
     static let foregroundColor = UIColor.white
     static let gradientColors: [GradientNavigationBarColor] = [GradientNavigationBarColor(color: UIColor.red, location: 0.0),
                                                                GradientNavigationBarColor(color: UIColor.orange, location: 1.0)]
+    static let spacing: CGFloat = 0.0
 }
 
 /// UINavigationController subclass which supports gradient backgrounds, bleeds into the status bar, and supports safeAreaLayoutGuide
@@ -41,6 +42,13 @@ open class GradientNavigationBar: UINavigationController {
 
     // The components of the gradient to be drawn in the background
     public var gradientColors: [GradientNavigationBarColor] = GradientNavigationDefaults.gradientColors {
+        didSet {
+            reloadAttributes()
+        }
+    }
+
+    // The spacing between the header and title text
+    public var spacing: CGFloat = GradientNavigationDefaults.spacing {
         didSet {
             reloadAttributes()
         }

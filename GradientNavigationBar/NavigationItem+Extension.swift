@@ -20,11 +20,13 @@ extension UINavigationItem {
         var headerFont = GradientNavigationDefaults.headerFont
         var titleFont = GradientNavigationDefaults.titleFont
         var textColor = GradientNavigationDefaults.foregroundColor
+        var spacing = GradientNavigationDefaults.spacing
 
         if let gradientNavigationBar = navigationController as? GradientNavigationBar {
             headerFont = gradientNavigationBar.headerFont
             titleFont = gradientNavigationBar.titleFont
             textColor = gradientNavigationBar.foregroundColor
+            spacing = gradientNavigationBar.spacing
         }
 
         // Header Label
@@ -48,7 +50,7 @@ extension UINavigationItem {
         // Add elements to the stack view, if one is nil, the other will be centered within the navbar
         let stackView = UIStackView(arrangedSubviews: [headerLabel, titleLabel])
         stackView.distribution = .equalCentering
-        stackView.spacing = -2
+        stackView.spacing = spacing
         stackView.axis = .vertical
 
         // TODO: get intrinsic content sizes of labels and use those for the stackview frame height
